@@ -15,15 +15,15 @@ def partition(arr, low, high):
     Helper function used to partition the array
     """
     pivot = arr[high]
-    swap_pointer = low - 1
+    swap_index = low - 1
 
     for j in range(low, high):
         if arr[j] <= pivot:
-            swap_pointer += 1
-            swap(arr, swap_pointer, j)
+            swap_index += 1
+            swap(arr, swap_index, j)
 
-    swap(arr, swap_pointer + 1, high)
-    return swap_pointer + 1
+    swap(arr, swap_index + 1, high)
+    return swap_index + 1
 
 
 def quick_sort(arr, low, high):
